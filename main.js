@@ -1,3 +1,20 @@
+// DOM elements 
+const resultEl = document.getElementById('result');
+const lengthEl = document.getElementById('length');
+const uppercaseEl = document.getElementById('uppercase');
+const lowercaseEl = document.getElementById('lowercase');
+const numbersEl = document.getElementById('numbers');
+const symbolsEl = document.getElementById('symbols');
+const generateEl = document.getElementById('generate');
+const clipboardEl = document.getElementById('clipboard');
+
+const randomFunc = {
+    lower: getRandomLower,
+    upper: getRandomUppercase,
+    number: getRandomNumber,
+    symbol: getRandomSymbol
+}
+
 // Generator functions 
 
 function getRandomLower() {
@@ -16,4 +33,3 @@ function getRandomSymbol() {
     const symbols = '!@#$%^&*(){}+<>/.,'
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
-console.log(getRandomSymbol());
